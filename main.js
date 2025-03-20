@@ -10,7 +10,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 // Texture Loader
 const textureLoader = new THREE.TextureLoader();
-const moonTexture = textureLoader.load('textures/moon.jpg');
+const moonTexture = textureLoader.load('/textures/moon.jpg');
 
 // Lighting (Sun as a light source)
 const pointLight = new THREE.PointLight(0xffffff, 2, 500);
@@ -25,7 +25,7 @@ scene.add(planetLight);
 
 // Sun
 const sunGeometry = new THREE.SphereGeometry(5, 32, 32);
-const sunMaterial = new THREE.MeshBasicMaterial({ map: textureLoader.load('textures/sun.jpg') });
+const sunMaterial = new THREE.MeshBasicMaterial({ map: textureLoader.load('/textures/sun.jpg') });
 const sun = new THREE.Mesh(sunGeometry, sunMaterial);
 scene.add(sun);
 
@@ -34,23 +34,23 @@ const planets = [];
 const planetOrbits = [];
 const moons = [];
 const planetData = [
-    { size: 0.5, distance: 10, speed: 0.02, texture: 'textures/mercury.jpg', moons: [] },
-    { size: 0.8, distance: 15, speed: 0.015, texture: 'textures/venus.jpg', moons: [] },
-    { size: 1, distance: 20, speed: 0.01, texture: 'textures/earth.jpg', moons: [
+    { size: 0.5, distance: 10, speed: 0.02, texture: '/textures/mercury.jpg', moons: [] },
+    { size: 0.8, distance: 15, speed: 0.015, texture: '/textures/venus.jpg', moons: [] },
+    { size: 1, distance: 20, speed: 0.01, texture: '/textures/earth.jpg', moons: [
         { size: 0.2, distance: 2, speed: 0.04 }
     ]},
-    { size: 0.7, distance: 25, speed: 0.008, texture: 'textures/mars.jpg', moons: [
+    { size: 0.7, distance: 25, speed: 0.008, texture: '/textures/mars.jpg', moons: [
         { size: 0.1, distance: 1.5, speed: 0.03 },
         { size: 0.1, distance: 2, speed: 0.02 } 
     ]},
-    { size: 2, distance: 35, speed: 0.005, texture: 'textures/jupiter.jpg', moons: [
+    { size: 2, distance: 35, speed: 0.005, texture: '/textures/jupiter.jpg', moons: [
         { size: 0.3, distance: 3, speed: 0.02 } 
     ]},
-    { size: 1.5, distance: 45, speed: 0.003, texture: 'textures/saturn.jpg', moons: [
+    { size: 1.5, distance: 45, speed: 0.003, texture: '/textures/saturn.jpg', moons: [
         { size: 0.4, distance: 4, speed: 0.018 } 
     ]},
-    { size: 1.2, distance: 55, speed: 0.002, texture: 'textures/uranus.jpg', moons: [] },
-    { size: 1.1, distance: 65, speed: 0.001, texture: 'textures/neptune.jpg', moons: [] }
+    { size: 1.2, distance: 55, speed: 0.002, texture: '/textures/uranus.jpg', moons: [] },
+    { size: 1.1, distance: 65, speed: 0.001, texture: '/textures/neptune.jpg', moons: [] }
 ];
 
 
